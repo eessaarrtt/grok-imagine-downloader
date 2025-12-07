@@ -1,0 +1,229 @@
+/* Grok Image Downloader Styles */
+
+#grok-download-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+}
+
+.grok-download-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.grok-download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.grok-download-button:active {
+    transform: translateY(0);
+}
+
+#grok-download-panel {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 10001;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.grok-panel-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grok-panel-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.grok-close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    transition: background 0.2s;
+}
+
+.grok-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.grok-panel-content {
+    padding: 20px;
+}
+
+.grok-input-group {
+    margin-bottom: 16px;
+}
+
+.grok-input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.grok-input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.grok-input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.grok-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.grok-stats span {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.grok-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.grok-action-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #667eea;
+    color: white;
+}
+
+.grok-action-btn:hover {
+    background: #5568d3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.grok-action-btn:active {
+    transform: translateY(0);
+}
+
+.grok-status {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.grok-status.info {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.grok-status.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.grok-status.warning {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.grok-status.error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.grok-progress {
+    margin-top: 16px;
+}
+
+.grok-progress-bar {
+    width: 100%;
+    height: 24px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.grok-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.3s ease;
+    border-radius: 12px;
+}
+
+.grok-progress-text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #667eea;
+}
+
+/* Скроллбар для панели */
+#grok-download-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+#grok-download-panel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#grok-download-panel::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 4px;
+}
+
+#grok-download-panel::-webkit-scrollbar-thumb:hover {
+    background: #5568d3;
+}
+
